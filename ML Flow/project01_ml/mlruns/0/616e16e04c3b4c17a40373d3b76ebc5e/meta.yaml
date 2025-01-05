@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/616e16e04c3b4c17a40373d3b76ebc5e/artifacts
+end_time: 1736116197561
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 616e16e04c3b4c17a40373d3b76ebc5e
+run_name: nimble-dolphin-417
+run_uuid: 616e16e04c3b4c17a40373d3b76ebc5e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1736116057177
+status: 4
+tags: []
+user_id: Piyush

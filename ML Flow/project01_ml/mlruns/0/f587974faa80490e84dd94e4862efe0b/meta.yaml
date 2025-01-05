@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/f587974faa80490e84dd94e4862efe0b/artifacts
+end_time: 1736115408843
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f587974faa80490e84dd94e4862efe0b
+run_name: stately-koi-667
+run_uuid: f587974faa80490e84dd94e4862efe0b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1736115227011
+status: 4
+tags: []
+user_id: Piyush

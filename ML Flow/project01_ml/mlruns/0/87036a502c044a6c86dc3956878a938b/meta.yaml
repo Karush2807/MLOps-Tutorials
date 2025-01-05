@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/87036a502c044a6c86dc3956878a938b/artifacts
+end_time: 1736115809264
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 87036a502c044a6c86dc3956878a938b
+run_name: gentle-newt-292
+run_uuid: 87036a502c044a6c86dc3956878a938b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1736115526994
+status: 4
+tags: []
+user_id: Piyush
