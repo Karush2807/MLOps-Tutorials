@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/454134894758928250/f0423d192fd04e34bd95c5ecdf3ab2d1/artifacts
+end_time: 1736104553090
+entry_point_name: ''
+experiment_id: '454134894758928250'
+lifecycle_stage: active
+run_id: f0423d192fd04e34bd95c5ecdf3ab2d1
+run_name: receptive-quail-88
+run_uuid: f0423d192fd04e34bd95c5ecdf3ab2d1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1736104549729
+status: 3
+tags: []
+user_id: Piyush
