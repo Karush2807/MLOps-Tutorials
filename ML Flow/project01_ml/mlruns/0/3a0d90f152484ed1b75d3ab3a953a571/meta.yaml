@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/3a0d90f152484ed1b75d3ab3a953a571/artifacts
+end_time: 1736116534390
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 3a0d90f152484ed1b75d3ab3a953a571
+run_name: bald-shark-444
+run_uuid: 3a0d90f152484ed1b75d3ab3a953a571
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1736116331492
+status: 3
+tags: []
+user_id: Piyush
