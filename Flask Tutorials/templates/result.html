@@ -6,6 +6,21 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>
+
+        final results
+
+
+    </h1>
+
+    <table border=2>
+        {% for key, value in results.items() %}
+        <tr>
+            {# this is the comment section #}
+            <th>{{key}}</th>
+            <th>{{value}}</th>
+        </tr>
+        {% endfor %}
+    </table>
 </body>
 </html>

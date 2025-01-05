@@ -14,6 +14,8 @@ isne ek instance bnaya flask class ka, jo hai: wsgi application
 '''
 
 {{ }} expression to print output in html
+{{ %...% }} conditons, for loops
+
 
 '''
 app=Flask(__name__)
@@ -49,10 +51,16 @@ def success(score):
 
     exp={'score': score, 'result':res}
 
-    return render_template('result.html', result=exp)
+    return render_template('result.html', results=exp)
 
 
+# variable rule with if condition
+@app.route('/success_res_if/<int:score>')
+def successif(score):
+    res=""
 
+
+    return render_template('resultif.html', results=score)
 
 if __name__=='__main__':
     app.run(debug=True)
