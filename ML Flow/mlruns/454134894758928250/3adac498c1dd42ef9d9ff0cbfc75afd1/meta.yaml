@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/454134894758928250/3adac498c1dd42ef9d9ff0cbfc75afd1/artifacts
+end_time: 1736111202200
+entry_point_name: ''
+experiment_id: '454134894758928250'
+lifecycle_stage: active
+run_id: 3adac498c1dd42ef9d9ff0cbfc75afd1
+run_name: suave-dolphin-135
+run_uuid: 3adac498c1dd42ef9d9ff0cbfc75afd1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1736111197629
+status: 3
+tags: []
+user_id: Piyush
