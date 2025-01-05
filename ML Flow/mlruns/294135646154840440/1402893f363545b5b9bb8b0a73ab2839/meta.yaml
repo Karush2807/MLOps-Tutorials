@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/294135646154840440/1402893f363545b5b9bb8b0a73ab2839/artifacts
+end_time: 1736100848792
+entry_point_name: ''
+experiment_id: '294135646154840440'
+lifecycle_stage: active
+run_id: 1402893f363545b5b9bb8b0a73ab2839
+run_name: wise-stoat-75
+run_uuid: 1402893f363545b5b9bb8b0a73ab2839
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1736100848703
+status: 3
+tags: []
+user_id: Piyush

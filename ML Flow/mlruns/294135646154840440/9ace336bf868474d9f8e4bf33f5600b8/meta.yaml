@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/294135646154840440/9ace336bf868474d9f8e4bf33f5600b8/artifacts
+end_time: 1736101220139
+entry_point_name: ''
+experiment_id: '294135646154840440'
+lifecycle_stage: active
+run_id: 9ace336bf868474d9f8e4bf33f5600b8
+run_name: handsome-toad-381
+run_uuid: 9ace336bf868474d9f8e4bf33f5600b8
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1736101220049
+status: 3
+tags: []
+user_id: Piyush
