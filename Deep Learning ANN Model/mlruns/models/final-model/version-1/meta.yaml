@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1736324046887
+current_stage: None
+description: ''
+last_updated_timestamp: 1736324046887
+name: final-model
+run_id: e5e5ccb265e14a72981c5bd4c216fda8
+run_link: ''
+source: file:///c:/Users/Piyush/Desktop/Personal%20Work/MLOps-Tutorials/Deep%20Learning%20ANN%20Model/mlruns/893108091327265436/e5e5ccb265e14a72981c5bd4c216fda8/artifacts/model
+status: READY
+status_message: null
+storage_location: file:///c:/Users/Piyush/Desktop/Personal%20Work/MLOps-Tutorials/Deep%20Learning%20ANN%20Model/mlruns/893108091327265436/e5e5ccb265e14a72981c5bd4c216fda8/artifacts/model
+user_id: null
+version: 1

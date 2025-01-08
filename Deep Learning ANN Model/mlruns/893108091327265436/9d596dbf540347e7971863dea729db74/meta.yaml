@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/Piyush/Desktop/Personal%20Work/MLOps-Tutorials/Deep%20Learning%20ANN%20Model/mlruns/893108091327265436/9d596dbf540347e7971863dea729db74/artifacts
+end_time: 1736322808646
+entry_point_name: ''
+experiment_id: '893108091327265436'
+lifecycle_stage: active
+run_id: 9d596dbf540347e7971863dea729db74
+run_name: victorious-midge-481
+run_uuid: 9d596dbf540347e7971863dea729db74
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1736322800965
+status: 3
+tags: []
+user_id: Piyush

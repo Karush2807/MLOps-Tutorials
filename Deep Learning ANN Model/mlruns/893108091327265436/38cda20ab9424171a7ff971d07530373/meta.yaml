@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/Piyush/Desktop/Personal%20Work/MLOps-Tutorials/Deep%20Learning%20ANN%20Model/mlruns/893108091327265436/38cda20ab9424171a7ff971d07530373/artifacts
+end_time: 1736322793707
+entry_point_name: ''
+experiment_id: '893108091327265436'
+lifecycle_stage: active
+run_id: 38cda20ab9424171a7ff971d07530373
+run_name: spiffy-asp-419
+run_uuid: 38cda20ab9424171a7ff971d07530373
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1736322773625
+status: 3
+tags: []
+user_id: Piyush
