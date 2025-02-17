@@ -6,7 +6,7 @@
 
 **key concepts of apache airflow**
 
-- DAG ( directed acylic graph ): collection of tasts we want to schedule and run [directed-> ek specific sequence hona chahiye tasks ka], [acylic--> koi bhi task independent nhi hone chahiye]
+- DAG ( directed acylic graph ): collection of tests we want to schedule and run [directed-> ek specific sequence hona chahiye tasks ka], [acylic--> koi bhi task independent nhi hone chahiye]
 
 - TASKS: individual unit of work in dag for eg-: python funciton, querying a database, sending a http request
 
