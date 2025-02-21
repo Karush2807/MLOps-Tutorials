@@ -1,0 +1,89 @@
+version: '3'
+
+# Define the volumes first - these persist data across container restarts
+volumes:
+  postgres_data:
+    driver: local
+  airflow_logs:
+    driver: local
+
+x-airflow-common: &airflow-common
+  image: apache/airflow:2.7.1
+  environment: &airflow-common-env
+    AIRFLOW__CORE__EXECUTOR: LocalExecutor
+    AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+    AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+    AIRFLOW__CORE__FERNET_KEY: ''  # You should generate a proper Fernet key
+    AIRFLOW__WEBSERVER__SECRET_KEY: ''  # You should generate a proper secret key
+  volumes:
+    - ./dags:/opt/airflow/dags  # Mount local DAGs folder
+    - ./logs:/opt/airflow/logs  # Mount local logs folder
+    - ./plugins:/opt/airflow/plugins  # Mount local plugins folder
+  depends_on:
+    - postgres
+
+services:
+  # PostgreSQL service for both Airflow metadata and your DAG data
+  postgres:
+    image: postgres:13
+    container_name: postgres_db
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+      # Create additional database for DAG data
+      POSTGRES_MULTIPLE_DATABASES: "airflow,apod_data"
+    ports:
+      - "5433:5432"  # Changed from default 5432 to avoid conflicts
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init-multiple-dbs.sh:/docker-entrypoint-initdb.d/init-multiple-dbs.sh  # Script to create multiple DBs
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "airflow"]
+      interval: 5s
+      retries: 5
+    networks:
+      - airflow_network
+
+  # Airflow Webserver
+  webserver:
+    <<: *airflow-common
+    command: webserver
+    ports:
+      - "8081:8080"  # Changed from 8080 to avoid conflicts
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    networks:
+      - airflow_network
+
+  # Airflow Scheduler
+  scheduler:
+    <<: *airflow-common
+    command: scheduler
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost:8974/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    networks:
+      - airflow_network
+
+  # Airflow Init (runs airflow db init and creates admin user)
+  init:
+    <<: *airflow-common
+    command: version
+    environment:
+      <<: *airflow-common-env
+      _AIRFLOW_DB_UPGRADE: 'true'
+      _AIRFLOW_WWW_USER_CREATE: 'true'
+      _AIRFLOW_WWW_USER_USERNAME: ${_AIRFLOW_WWW_USER_USERNAME:-admin}
+      _AIRFLOW_WWW_USER_PASSWORD: ${_AIRFLOW_WWW_USER_PASSWORD:-admin}
+    networks:
+      - airflow_network
+
+networks:
+  airflow_network:
+    driver: bridge
